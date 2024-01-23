@@ -97,7 +97,7 @@ import { ref } from 'vue'
 .section2 img {
     background: black;
     width: 100%;
-    height: auto;
+    height: 100vh;
     filter: blur(3px);
 }
 
@@ -175,5 +175,12 @@ import { ref } from 'vue'
     max-width: 100vw;
     height: 100%;
     background: rgb(0, 162, 255);
+}
+
+@media only screen and (max-width: 600px) {
+    .text h1 {
+        font-size: 15vw;
+        width: 100%;
+    }
 }
 </style>
