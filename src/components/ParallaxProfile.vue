@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import ExpTimeline from '../components/ExperienceTimeline.vue'
+
 </script>
 
 <template>
@@ -14,22 +16,11 @@ import { ref } from 'vue'
             <img src="../assets/black-texture.jpg" alt="Black Texture Image">
             <div>
                 <div class="title-container">
-                    <span class="skills-title" ref="skillsTitle" @animationiteration="restartAnimation">Skills</span>
+                    <span class="skills-title" ref="skillsTitle" @animationiteration="restartAnimation">Experience</span>
                 </div>
             </div>
-            <div class="skills-info">
-                <tr>
-                    <td>React</td>
-                    <td>CSS</td>
-                    <td>HTML</td>
-                    <td>Javascript</td>
-                    <td>Typescript</td>
-                </tr>
-                <h2 class="content">React</h2>
-                <h2 class="content">CSS</h2>
-                <h2 class="content">HTML</h2>
-                <h2 class="content">Javascript</h2>
-                <h2 class="content">Typescript</h2>
+            <div class="exp-info">
+                <ExpTimeline />
             </div>
         </div>
     </div>
@@ -96,9 +87,10 @@ import { ref } from 'vue'
 
 .section2 img {
     background: black;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    filter: blur(3px);
+    filter: blur(10px);
+    border: none;
 }
 
 .text h1 {
@@ -123,16 +115,16 @@ import { ref } from 'vue'
 .skills-title {
     position: absolute;
     text-shadow: 3px 3px 6px rgb(0, 0, 0);
-    top: 20%;
+    top: 10%;
     color: aliceblue;
-    background-color: crimson;
-    font-size: 5rem;
+    background-color: rgb(91, 127, 194);
+    font-size: 4.5rem;
     display: block;
     font-family: 'brastagi', monospace;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 7ch;
-    animation: typing 4s steps(7) infinite, blink .3s infinite step-end alternate;
+    width: 11ch;
+    animation: typing 4s steps(11) infinite, blink .3s infinite step-end alternate;
     overflow: hidden;
 }
 
@@ -175,6 +167,13 @@ import { ref } from 'vue'
     max-width: 100vw;
     height: 100%;
     background: rgb(0, 162, 255);
+}
+
+.exp-info {
+    position: absolute;
+    top: 15%;
+    padding: 0%;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {
