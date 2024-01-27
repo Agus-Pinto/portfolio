@@ -196,6 +196,39 @@ import { ref } from 'vue'
     left: -14px;
 }
 
+@media screen and (max-width: 1024px) {
+    .timeline::after {
+        left: 50px;
+        z-index: 1;
+    }   
+
+    .container {
+        width: 80%;
+        padding-left: 80px;
+        padding-right: 25px;
+        margin-bottom: 3%;
+    }
+
+    .right-container, .left-container {
+        left: 3%;
+    }
+
+    .text-box {
+        font-size: 1.2rem;
+    }
+
+    .left-container img, .right-container img {
+        left: 0px;
+        z-index: 10;
+    }
+
+    .left-container-arrow , .right-container-arrow {
+        border-right: 15px solid white;
+        border-left: 0;
+        left: -1.6%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .timeline {
         margin: 50px auto;
@@ -214,7 +247,6 @@ import { ref } from 'vue'
 
     .text-box {
         font-size: 1.2rem;
-        ;
     }
 
     .text-box small {

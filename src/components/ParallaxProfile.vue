@@ -181,5 +181,9 @@ import ExpTimeline from '../components/ExperienceTimeline.vue'
         font-size: 15vw;
         width: 100%;
     }
+
+    .skills-title {
+        font-size: 3.5em;
+    }
 }
 </style>
