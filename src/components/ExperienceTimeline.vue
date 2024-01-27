@@ -1,20 +1,21 @@
 <script setup>
 import { ref } from 'vue'
-
 </script>
 
 <template>
     <div class="box-container">
         <div class="timeline">
             <div class="container left-container">
-                <img src="../assets/bbs.ico">
+                <div class="image-container">
+                    <img src="../assets/bbs.ico">
+                </div>
                 <div class="text-box">
                     <h2>Software Developer</h2>
                     <small>x - x</small>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, reiciendis. Sunt numquam, officia
                         architecto aperiam inventore ipsum eligendi est rem totam voluptatibus nam placeat, perferendis
                         nulla odio velit animi voluptate.</p>
-                        <span class="left-container-arrow"></span>
+                    <span class="left-container-arrow"></span>
                 </div>
             </div>
 
@@ -26,7 +27,7 @@ import { ref } from 'vue'
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, reiciendis. Sunt numquam, officia
                         architecto aperiam inventore ipsum eligendi est rem totam voluptatibus nam placeat, perferendis
                         nulla odio velit animi voluptate.</p>
-                        <span class="right-container-arrow"></span>
+                    <span class="right-container-arrow"></span>
                 </div>
             </div>
 
@@ -38,7 +39,7 @@ import { ref } from 'vue'
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, reiciendis. Sunt numquam, officia
                         architecto aperiam inventore ipsum eligendi est rem totam voluptatibus nam placeat, perferendis
                         nulla odio velit animi voluptate.</p>
-                        <span class="left-container-arrow"></span>
+                    <span class="left-container-arrow"></span>
                 </div>
             </div>
 
@@ -50,7 +51,7 @@ import { ref } from 'vue'
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, reiciendis. Sunt numquam, officia
                         architecto aperiam inventore ipsum eligendi est rem totam voluptatibus nam placeat, perferendis
                         nulla odio velit animi voluptate.</p>
-                        <span class="right-container-arrow"></span>
+                    <span class="right-container-arrow"></span>
                 </div>
             </div>
         </div>
@@ -59,9 +60,8 @@ import { ref } from 'vue'
 
 <style scoped>
 .box-container {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 .text-box {
@@ -71,23 +71,27 @@ import { ref } from 'vue'
     position: relative;
     border-radius: 6px;
     font-size: 15px;
-    text-shadow: 3px 3px 9px rgb(32, 32, 32);
+    text-shadow: 3px 3px 5px rgb(32, 32, 32);
     text-align: left;
 }
 
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 100px auto;
 }
 
 .container {
+    max-width: 40%;
     padding: 10px 30px;
     position: relative;
-    width: 50%;
     animation: movedown 1s linear forwards;
     opacity: 0;
 }
+
 
 @keyframes movedown {
     0% {
@@ -101,43 +105,42 @@ import { ref } from 'vue'
     }
 }
 
-.container:nth-child(1){
+.container:nth-child(1) {
     animation-delay: 0s;
 }
 
-.container:nth-child(2){
+.container:nth-child(2) {
     animation-delay: 1s;
 }
 
-.container:nth-child(3){
+.container:nth-child(3) {
     animation-delay: 2s;
 }
 
-.container:nth-child(4){
+.container:nth-child(4) {
     animation-delay: 3s;
 }
 
 .left-container {
-    left: 3%;
+    left: 3.5%;
 }
 
 .right-container {
-    left: 64%;
+    left: 52.5%;
 }
 
-.container img {
+.container img , .image-container img{
     position: absolute;
     width: 40px;
     border-radius: 50%;
     background: rgb(255, 255, 255);
     padding: 2px;
-    right: -58px;
+    right: -9%;
     top: 32px;
-    z-index: 10;
 }
 
 .right-container img {
-    left: -58px;
+    left: -9%;
 }
 
 .timeline::after {
@@ -147,7 +150,7 @@ import { ref } from 'vue'
     height: 100%;
     background: white;
     top: 0;
-    left: 61%;
+    left: 50%;
     margin-left: -3px;
     z-index: 1;
     animation: moveline 6s linear forwards;
@@ -181,7 +184,7 @@ import { ref } from 'vue'
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-left: 15px solid rgb(91, 127, 194);
-    right: -15px;
+    right: -14px;
 }
 
 .right-container-arrow {
@@ -196,38 +199,6 @@ import { ref } from 'vue'
     left: -14px;
 }
 
-@media screen and (max-width: 1024px) {
-    .timeline::after {
-        left: 50px;
-        z-index: 1;
-    }   
-
-    .container {
-        width: 80%;
-        padding-left: 80px;
-        padding-right: 25px;
-        margin-bottom: 3%;
-    }
-
-    .right-container, .left-container {
-        left: 3%;
-    }
-
-    .text-box {
-        font-size: 1.2rem;
-    }
-
-    .left-container img, .right-container img {
-        left: 0px;
-        z-index: 10;
-    }
-
-    .left-container-arrow , .right-container-arrow {
-        border-right: 15px solid white;
-        border-left: 0;
-        left: -1.6%;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .timeline {
@@ -240,7 +211,7 @@ import { ref } from 'vue'
     }
 
     .container {
-        width: 70%;
+        max-width: 100%;
         padding-left: 80px;
         padding-right: 25px;
     }
@@ -263,9 +234,9 @@ import { ref } from 'vue'
     }
 
     .left-container-arrow , .right-container-arrow {
-        border-right: 15px solid white;
+        border-right: 15px solid rgb(91, 127, 194);
         border-left: 0;
-        left: -5%;
+        left: -4%;
     }
 }
 </style>

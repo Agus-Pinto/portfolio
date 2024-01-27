@@ -113,7 +113,8 @@ import ExpTimeline from '../components/ExperienceTimeline.vue'
 }
 
 .skills-title {
-    position: absolute;
+    position: absolute;border-radius: 10px;
+    padding: 5px;
     text-shadow: 3px 3px 6px rgb(0, 0, 0);
     top: 10%;
     color: aliceblue;
