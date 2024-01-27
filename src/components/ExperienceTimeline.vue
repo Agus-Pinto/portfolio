@@ -122,7 +122,7 @@ import { ref } from 'vue'
 }
 
 .left-container {
-    left: 3.5%;
+    right: -3.5%;
 }
 
 .right-container {
@@ -135,8 +135,11 @@ import { ref } from 'vue'
     border-radius: 50%;
     background: rgb(255, 255, 255);
     padding: 2px;
-    right: -9%;
     top: 32px;
+}
+
+.left-container img {
+    right: -9%;
 }
 
 .right-container img {
@@ -151,7 +154,6 @@ import { ref } from 'vue'
     background: white;
     top: 0;
     left: 50%;
-    margin-left: -3px;
     z-index: 1;
     animation: moveline 6s linear forwards;
 }
@@ -199,6 +201,15 @@ import { ref } from 'vue'
     left: -14px;
 }
 
+@media screen and (max-width: 625px) {
+    .left-container {
+        right: -0%;
+    }
+    
+    .right-container {
+        left: 52%;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .timeline {
@@ -239,4 +250,5 @@ import { ref } from 'vue'
         left: -4%;
     }
 }
+
 </style>
