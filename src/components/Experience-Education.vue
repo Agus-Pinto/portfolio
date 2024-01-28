@@ -79,4 +79,11 @@ import { ref } from 'vue'
     font-size: xx-small;
 }
 
+@media only screen and (max-width: 600px) {
+    .exp-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
 </style>

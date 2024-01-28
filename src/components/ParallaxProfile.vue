@@ -191,7 +191,7 @@ import ExpEduc from '../components/Experience-Education.vue'
 
     .title-container {
         position: absolute;
-        top: 5%;
+        top: 5.5%;
         left: 20%;
     }
 }
