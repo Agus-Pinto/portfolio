@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import ExpTimeline from '../components/ExperienceTimeline.vue'
-
+import ExpEduc from '../components/Experience-Education.vue'
 </script>
 
 <template>
@@ -20,7 +20,8 @@ import ExpTimeline from '../components/ExperienceTimeline.vue'
                 </div>
             </div>
             <div class="exp-info">
-                <ExpTimeline />
+                <!-- <ExpTimeline /> -->
+                <ExpEduc />
             </div>
         </div>
     </div>
@@ -108,8 +109,8 @@ import ExpTimeline from '../components/ExperienceTimeline.vue'
 .title-container {
     display: flex;
     width: 100vw;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 .skills-title {
@@ -117,9 +118,10 @@ import ExpTimeline from '../components/ExperienceTimeline.vue'
     padding: 5px;
     text-shadow: 3px 3px 6px rgb(0, 0, 0);
     top: 10%;
+    left: 2%;
     color: aliceblue;
     background-color: rgb(91, 127, 194);
-    font-size: 4.5rem;
+    font-size: 3rem;
     display: block;
     font-family: 'brastagi', monospace;
     white-space: nowrap;
