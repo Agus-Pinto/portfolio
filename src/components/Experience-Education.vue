@@ -7,47 +7,99 @@ import { ref } from 'vue'
         <div class="exp-box exp-box1">
             <div class="exp-img"><img src="../assets/logo.png" alt="Software Developer"></div>
             <div class="exp-content">
-                <div class="exp-title"><h1>Software Developer</h1></div>
-                <div class="exp-date"><h2>August 2021 - February 2024</h2></div>
-                <div class="exp-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam cupiditate laudantium sapiente?</p></div>
+                <div class="exp-title">
+                    <h1>Software Developer</h1>
+                </div>
+                <div class="exp-date">
+                    <h2>August 2021 - February 2024</h2>
+                </div>
+                <div class="exp-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam
+                        mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam
+                        cupiditate laudantium sapiente?</p>
+                </div>
             </div>
         </div>
         <div class="exp-box exp-box2">
             <div class="exp-img"><img src="../assets/logo.png" alt="Trainee"></div>
             <div class="exp-content">
-                <div class="exp-title"><h1>Trainee</h1></div>
-                <div class="exp-date"><h2>September 2020 - August 2021</h2></div>
-                <div class="exp-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam cupiditate laudantium sapiente?</p></div>
+                <div class="exp-title">
+                    <h1>Trainee</h1>
+                </div>
+                <div class="exp-date">
+                    <h2>September 2020 - August 2021</h2>
+                </div>
+                <div class="exp-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam
+                        mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam
+                        cupiditate laudantium sapiente?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title-container">
+        <span class="educ-title" ref="skillsTitle" @animationiteration="restartAnimation">Education</span>
+    </div>
+
+    <div class="educ-container">
+        <div class="edc-box">
+            <div class="edc-img"><img src="../assets/logo-issd.svg" alt="Trainee"></div>
+            <div class="edc-content">
+                <div class="edc-title">
+                    <h1>Systems analyst technician</h1>
+                </div>
+                <div class="edc-date">
+                    <h2>January 2020 - In progress</h2>
+                </div>
+                <div class="edc-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam
+                        mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam
+                        cupiditate laudantium sapiente?</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-.exp-container h1, h2, p {
+.exp-container h1,
+h2,
+p,
+.educ-container h1,
+h2,
+p {
     color: wheat;
 }
 
-.exp-container {
+.exp-container,
+.educ-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    width: 70%; /* Ajusta el ancho del contenedor principal según sea necesario */
-    margin-top: 5.5%; /* Centra el contenedor en la página */
+    width: 70%;
+    margin-top: 5.5%;
     margin-left: 15%;
 }
 
-.exp-box {
+.educ-container {
+    margin-top: 12%;
+    padding-bottom: 5%;
+}
+
+.exp-box,
+.edc-box {
     display: grid;
-    grid-template-columns: 20% 1fr; /* Ajusta el tamaño de la primera columna según sea necesario */
+    grid-template-columns: 20% 1fr;
+    /* Ajusta el tamaño de la primera columna según sea necesario */
     gap: 10px;
     align-items: center;
-    background: rgba(128, 128, 128, 0.286);
+    background: rgba(128, 128, 128, 0.474);
     text-align: center;
 }
 
-.exp-img {
-    background: rgba(255, 255, 255, 0.238);
+.exp-img,
+.edc-img {
+    background: rgba(255, 255, 255, 0.426);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,23 +107,27 @@ import { ref } from 'vue'
     border-right: 3px solid rgba(38, 38, 38, 0.813);
 }
 
-.exp-img img {
+.exp-img img,
+.edc-img img {
     max-width: 80%;
     max-height: 100%;
     opacity: 1;
 }
 
-.exp-content {
+.exp-content,
+.edc-content {
     padding: 10px;
     margin-top: -2%;
     margin-bottom: 2%;
 }
 
-.exp-title {
+.exp-title,
+.edc-title {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.exp-date {
+.exp-date,
+.edc-date {
     border-bottom: 2px solid rgb(55, 55, 55);
     margin-right: 5%;
     margin-left: 5%;
@@ -79,11 +135,64 @@ import { ref } from 'vue'
     font-size: xx-small;
 }
 
-@media only screen and (max-width: 600px) {
-    .exp-container {
-        width: 90%;
-        margin-left: 5%;
+.title-container {
+    display: flex;
+    width: 100vw;
+    justify-content: left;
+    align-items: left;
+}
+
+.educ-title {
+    position: absolute;
+    padding: 5px;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    margin-top: 5%;
+    left: 2%;
+    color: aliceblue;
+    background-color: rgb(57, 84, 135);
+    font-size: 2.5rem;
+    display: block;
+    font-family: 'brastagi', monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 4s steps(10) infinite, blink .3s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
     }
 }
 
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .exp-container,
+    .educ-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .educ-container {
+        margin-top: 50%;
+    }
+
+    .educ-title {
+        animation: none;
+        font-size: 2.5em;
+    }
+
+    .title-container {
+        position: absolute;
+        left: 20%;
+        margin-top: 15%;
+    }
+}
 </style>

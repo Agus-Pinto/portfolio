@@ -20,8 +20,8 @@ import ExpEduc from '../components/Experience-Education.vue'
                 </div>
             </div>
             <div class="exp-info">
-                <!-- <ExpTimeline /> -->
                 <ExpEduc />
+                <!-- <ExpTimeline /> -->
             </div>
         </div>
     </div>
@@ -32,8 +32,6 @@ import ExpEduc from '../components/Experience-Education.vue'
     font-family: "brastagi";
     src: url(/src/assets/VCR_OSD_MONO_1.001.ttf) format('truetype');
 }
-
-
 
 .container {
     width: 100vw;
@@ -120,7 +118,7 @@ import ExpEduc from '../components/Experience-Education.vue'
     top: 10%;
     left: 2%;
     color: aliceblue;
-    background-color: rgb(75, 109, 173);
+    background-color: rgb(57, 84, 135);
     font-size: 2.5rem;
     display: block;
     font-family: 'brastagi', monospace;
@@ -187,12 +185,14 @@ import ExpEduc from '../components/Experience-Education.vue'
 
     .skills-title {
         font-size: 2.5em;
+        animation: none;
     }
 
     .title-container {
         position: absolute;
-        top: 5.5%;
+        top: 5.6%;
         left: 20%;
+        margin-top: 2%;
     }
 }
 </style>
