@@ -18,6 +18,12 @@ import { ref } from 'vue'
                         mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam
                         cupiditate laudantium sapiente?</p>
                 </div>
+                <div class="tech-icons">
+                    <img src="../assets/react.webp" alt="">
+                    <img src="../assets/react.webp" alt="">
+                    <img src="../assets/react.webp" alt="">
+                    <img src="../assets/react.webp" alt="">
+                </div>
             </div>
         </div>
         <div class="exp-box exp-box2">
@@ -33,6 +39,16 @@ import { ref } from 'vue'
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure nesciunt neque numquam totam
                         mollitia et consectetur, repudiandae saepe consequatur ipsam beatae nemo rem non delectus aliquam
                         cupiditate laudantium sapiente?</p>
+                </div>
+                <div class="tech-icons">
+                    <img src="../assets/react.png" alt="">
+                    <img src="../assets/html.png" alt="">
+                    <img src="../assets/css.png" alt="">
+                    <img src="../assets/materialUi.png" alt="">
+                    <img src="../assets/python.png" alt="">
+                    <img src="../assets/docker.png" alt="">
+                    <img src="../assets/aws.png" alt="">
+                    <img src="../assets/github.png" alt="">
                 </div>
             </div>
         </div>
@@ -71,6 +87,7 @@ p {
     color: wheat;
 }
 
+
 .exp-container,
 .educ-container {
     display: grid;
@@ -97,6 +114,30 @@ p {
     text-align: center;
 }
 
+.exp-box {
+    margin-bottom: 2%;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.tech-icons img {
+    padding-right: 2%;
+    width: 30px;
+    background: white;
+    border-radius: 100%;
+    padding: 1.2%;
+    margin-left: 2%;
+}
+
+.exp-box:hover {
+    box-shadow: -1px 0px 9px 2px rgb(86, 90, 94);
+
+}
+
 .exp-img,
 .edc-img {
     background: rgba(255, 255, 255, 0.426);
@@ -117,7 +158,7 @@ p {
 .exp-content,
 .edc-content {
     padding: 10px;
-    margin-top: -2%;
+    margin-top: -1%;
     margin-bottom: 2%;
 }
 
@@ -145,11 +186,11 @@ p {
 .educ-title {
     position: absolute;
     padding: 5px;
-    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    text-shadow: 3px 2px 5px rgb(0, 0, 0);
     margin-top: 5%;
     left: 2%;
-    color: aliceblue;
-    background-color: rgb(57, 84, 135);
+    color: rgba(255, 255, 255, 0.879);
+    background-color: rgba(255, 255, 255, 0.341);
     font-size: 2.5rem;
     display: block;
     font-family: 'brastagi', monospace;
@@ -193,6 +234,16 @@ p {
         position: absolute;
         left: 20%;
         margin-top: 15%;
+    }
+
+    .tech-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tech-icons img {
+        margin: 5px;
     }
 }
 </style>

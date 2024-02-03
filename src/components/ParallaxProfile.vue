@@ -114,11 +114,11 @@ import ExpEduc from '../components/Experience-Education.vue'
 .skills-title {
     position: absolute;
     padding: 5px;
-    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    text-shadow: 3px 2px 5px rgb(0, 0, 0);
     top: 10%;
     left: 2%;
-    color: aliceblue;
-    background-color: rgb(57, 84, 135);
+    color: rgba(255, 255, 255, 0.879);
+    background-color: rgba(255, 255, 255, 0.341);
     font-size: 2.5rem;
     display: block;
     font-family: 'brastagi', monospace;
@@ -191,7 +191,7 @@ import ExpEduc from '../components/Experience-Education.vue'
     .title-container {
         position: absolute;
         top: 5.6%;
-        left: 20%;
+        left: 18%;
         margin-top: 2%;
     }
 }
