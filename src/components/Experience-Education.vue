@@ -41,14 +41,14 @@ import { ref } from 'vue'
                         cupiditate laudantium sapiente?</p>
                 </div>
                 <div class="tech-icons">
-                    <img src="../assets/react.png" alt="">
-                    <img src="../assets/html.png" alt="">
-                    <img src="../assets/css.png" alt="">
-                    <img src="../assets/materialUi.png" alt="">
-                    <img src="../assets/python.png" alt="">
-                    <img src="../assets/docker.png" alt="">
-                    <img src="../assets/aws.png" alt="">
-                    <img src="../assets/github.png" alt="">
+                    <img src="../assets/react.svg" alt="">
+                    <img src="../assets/html.svg" alt="">
+                    <img src="../assets/css.svg" alt="">
+                    <img src="../assets/materialUi.svg" alt="">
+                    <img src="../assets/python.svg" alt="">
+                    <img src="../assets/docker.svg" alt="">
+                    <img src="../assets/aws.svg" alt="">
+                    <img src="../assets/github.svg" alt="">
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@ p {
 
     .tech-icons img {
         margin: 5px;
-        width: 11%;
+        width: 10%;
     }
 }
 </style>
