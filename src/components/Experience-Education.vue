@@ -244,6 +244,7 @@ p {
 
     .tech-icons img {
         margin: 5px;
+        width: 11%;
     }
 }
 </style>
