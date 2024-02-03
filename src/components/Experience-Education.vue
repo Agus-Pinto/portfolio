@@ -19,10 +19,15 @@ import { ref } from 'vue'
                         cupiditate laudantium sapiente?</p>
                 </div>
                 <div class="tech-icons">
-                    <img src="../assets/react.webp" alt="">
-                    <img src="../assets/react.webp" alt="">
-                    <img src="../assets/react.webp" alt="">
-                    <img src="../assets/react.webp" alt="">
+                    <img src="../assets/react.svg" alt="">
+                    <img src="../assets/typescript.svg" alt="">
+                    <img src="../assets/html.svg" alt="">
+                    <img src="../assets/css.svg" alt="">
+                    <img src="../assets/materialUi.svg" alt="">
+                    <img src="../assets/docker.svg" alt="">
+                    <img src="../assets/aws.svg" alt="">
+                    <img src="../assets/github.svg" alt="">
+
                 </div>
             </div>
         </div>
@@ -41,6 +46,7 @@ import { ref } from 'vue'
                         cupiditate laudantium sapiente?</p>
                 </div>
                 <div class="tech-icons">
+                    <img src="../assets/javascript.svg" alt="">
                     <img src="../assets/react.svg" alt="">
                     <img src="../assets/html.svg" alt="">
                     <img src="../assets/css.svg" alt="">
@@ -49,6 +55,7 @@ import { ref } from 'vue'
                     <img src="../assets/docker.svg" alt="">
                     <img src="../assets/aws.svg" alt="">
                     <img src="../assets/github.svg" alt="">
+                    <img src="../assets/nodejs.svg" alt="">
                 </div>
             </div>
         </div>
@@ -244,7 +251,7 @@ p {
 
     .tech-icons img {
         margin: 5px;
-        width: 10%;
+        width: 12%;
     }
 }
 </style>
