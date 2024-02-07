@@ -3,6 +3,7 @@ import { ref } from 'vue'
 </script>
 
 <template>
+    <div class="particles-container" id="particles-js"></div>
     <div class="exp-container">
         <div class="exp-box exp-box1">
             <div class="exp-img"><img src="../assets/logo.png" alt="Software Developer"></div>
@@ -85,13 +86,22 @@ import { ref } from 'vue'
 </template>
 
 <style scoped>
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1%;
+}
+
 .exp-container h1,
 h2,
 p,
 .educ-container h1,
 h2,
 p {
-    color: wheat;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -101,8 +111,21 @@ p {
     grid-template-columns: 1fr;
     gap: 20px;
     width: 70%;
-    margin-top: 5.5%;
+    margin-top: 4%;
     margin-left: 15%;
+}
+
+.exp-box:hover .tech-icons img,
+.educ-box:hover .tech-icons img {
+    transition: ease 1s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.623);
+}
+
+.exp-box:hover,
+.edc-box:hover {
+    box-shadow: 0px 0px 10px rgba(168, 168, 168, 0.681);
+    transition: ease 1s;
 }
 
 .educ-container {
@@ -114,11 +137,11 @@ p {
 .edc-box {
     display: grid;
     grid-template-columns: 20% 1fr;
-    /* Ajusta el tamaño de la primera columna según sea necesario */
     gap: 10px;
     align-items: center;
-    background: rgba(128, 128, 128, 0.474);
+    background: rgba(128, 128, 128, 0.608);
     text-align: center;
+    z-index: 2;
 }
 
 .exp-box {
@@ -127,27 +150,25 @@ p {
 
 .tech-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 2%;
+    width: 100%;
 }
 
 .tech-icons img {
     padding-right: 2%;
-    width: 30px;
+    max-width: 30px;
     background: white;
     border-radius: 100%;
     padding: 1.2%;
     margin-left: 2%;
-}
-
-.exp-box:hover {
-    box-shadow: -1px 0px 9px 2px rgb(86, 90, 94);
-
+    transition: transform 0.2s ease;
 }
 
 .exp-img,
 .edc-img {
-    background: rgba(255, 255, 255, 0.426);
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +197,7 @@ p {
 
 .exp-date,
 .edc-date {
-    border-bottom: 2px solid rgb(55, 55, 55);
+    border-bottom: 2px solid rgb(252, 249, 249);
     margin-right: 5%;
     margin-left: 5%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -194,17 +215,18 @@ p {
     position: absolute;
     padding: 5px;
     text-shadow: 3px 2px 5px rgb(0, 0, 0);
+    border-radius: 15%;
     margin-top: 5%;
     left: 2%;
     color: rgba(255, 255, 255, 0.879);
-    background-color: rgba(255, 255, 255, 0.341);
+    background: rgba(128, 128, 128, 0.608);
     font-size: 2.5rem;
     display: block;
-    font-family: 'brastagi', monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 10ch;
-    animation: typing 4s steps(10) infinite, blink .3s infinite step-end alternate;
+    width: 9ch;
+    animation: typing 4s steps(9) infinite, blink .3s infinite step-end alternate;
     overflow: hidden;
 }
 

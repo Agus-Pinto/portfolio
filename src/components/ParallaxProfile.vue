@@ -1,31 +1,79 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUpdated } from 'vue'
 import ExpTimeline from '../components/ExperienceTimeline.vue'
 import ExpEduc from '../components/Experience-Education.vue'
+
+const canvasRef = ref(null)
+
+onMounted(() => {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 1  // Ajusté el tamaño de las partículas a 2
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+            }
+        }
+    });
+});
 </script>
+
 
 <template>
     <div class="container">
         <div class="section1">
             <div class="text">
                 <h1>Agustina Pinto Software developer</h1>
-                <!-- <h1>Software Developer</h1> -->
             </div>
         </div>
-        <div class="section2">
-            <img src="../assets/black-texture.jpg" alt="Black Texture Image">
-            <div>
+        <div class="section2" >
+            <div >
                 <div class="title-container">
                     <span class="skills-title" ref="skillsTitle" @animationiteration="restartAnimation">Experience</span>
                 </div>
-            </div>
-            <div class="exp-info">
-                <ExpEduc />
-                <!-- <ExpTimeline /> -->
+                <div class="exp-info" >
+                        <ExpEduc />
+                    <!-- <ExpTimeline /> -->
+                </div>
             </div>
         </div>
     </div>
 </template>
+
 
 <style scoped>
 @font-face {
@@ -37,12 +85,21 @@ import ExpEduc from '../components/Experience-Education.vue'
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background: black;
+    background: rgb(2, 1, 20);
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.section2 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    /* Asegúrate de que la sección 2 ocupe toda la pantalla */
+    background: rgb(2, 1, 20);
+}
+
 
 .section1,
 .section2 {
@@ -114,18 +171,19 @@ import ExpEduc from '../components/Experience-Education.vue'
 .skills-title {
     position: absolute;
     padding: 5px;
+    border-radius: 15%;
     text-shadow: 3px 2px 5px rgb(0, 0, 0);
     top: 10%;
     left: 2%;
     color: rgba(255, 255, 255, 0.879);
-    background-color: rgba(255, 255, 255, 0.341);
+    background: rgba(128, 128, 128, 0.608);
     font-size: 2.5rem;
     display: block;
-    font-family: 'brastagi', monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 11ch;
-    animation: typing 4s steps(11) infinite, blink .3s infinite step-end alternate;
+    width: 10ch;
+    animation: typing 4s steps(10) infinite, blink .3s infinite step-end alternate;
     overflow: hidden;
 }
 
@@ -145,7 +203,7 @@ import ExpEduc from '../components/Experience-Education.vue'
     width: 100vw;
     position: absolute;
     top: 40%;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 
 .content {
@@ -158,16 +216,6 @@ import ExpEduc from '../components/Experience-Education.vue'
     transition: 0.5s;
     transform-origin: left;
     transform: scaleX(1);
-}
-
-.skills-info .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100vw;
-    height: 100%;
-    background: rgb(0, 162, 255);
 }
 
 .exp-info {
